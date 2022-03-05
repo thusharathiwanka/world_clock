@@ -18,8 +18,16 @@ class _HomeState extends State<Home> {
             onPressed: () {
               Navigator.pushNamed(context, '/location');
             },
-            icon: const Icon(Icons.edit_location_outlined),
-            label: const Text('Change Location'),
+            icon: const Icon(
+              Icons.edit_location_outlined,
+              color: Colors.white,
+            ),
+            label: const Text(
+              'Change Location',
+              style: TextStyle(color: Colors.white),
+            ),
+            style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.pink[600])),
           )
         ],
       ),
