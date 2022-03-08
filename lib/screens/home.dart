@@ -8,8 +8,12 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  Map<dynamic, dynamic> data = {};
+
   @override
   Widget build(BuildContext context) {
+    data = ModalRoute.of(context)?.settings.arguments as Map;
+
     return Scaffold(
         body: SafeArea(
       child: Column(
@@ -21,7 +25,7 @@ class _HomeState extends State<Home> {
                 Navigator.pushNamed(context, '/location');
               },
               icon: const Icon(
-                Icons.edit_location_outlined,
+                Icons.edit_location_rounded,
                 color: Colors.white,
               ),
               label: const Text(

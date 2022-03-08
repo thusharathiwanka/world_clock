@@ -16,8 +16,10 @@ class _LoadingState extends State<Loading> {
     WorldTime worldTime = WorldTime(
         location: 'Berlin', flag: 'germany.png', url: 'Europe/Berlin');
     await worldTime.getTime();
-    setState(() {
-      time = worldTime.time;
+    Navigator.pushReplacementNamed(context, '/home', arguments: {
+      'location': worldTime.location,
+      'time': worldTime.time,
+      'flag': worldTime.flag
     });
   }
 
