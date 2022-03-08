@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 import 'package:world_clock/services/world_time.dart';
 
@@ -31,6 +32,10 @@ class _LoadingState extends State<Loading> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: SafeArea(child: Text(time)));
+    return const Scaffold(
+        body: SafeArea(
+            child: Center(
+      child: SpinKitRotatingCircle(color: Colors.purple, size: 50),
+    )));
   }
 }
