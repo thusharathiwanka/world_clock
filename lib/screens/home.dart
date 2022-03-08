@@ -13,21 +13,24 @@ class _HomeState extends State<Home> {
     return Scaffold(
         body: SafeArea(
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.end,
         children: [
-          TextButton.icon(
-            onPressed: () {
-              Navigator.pushNamed(context, '/location');
-            },
-            icon: const Icon(
-              Icons.edit_location_outlined,
-              color: Colors.white,
+          Center(
+            child: TextButton.icon(
+              onPressed: () {
+                Navigator.pushNamed(context, '/location');
+              },
+              icon: const Icon(
+                Icons.edit_location_outlined,
+                color: Colors.white,
+              ),
+              label: const Text(
+                'Change Location',
+                style: TextStyle(color: Colors.white),
+              ),
+              style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.pink[600])),
             ),
-            label: const Text(
-              'Change Location',
-              style: TextStyle(color: Colors.white),
-            ),
-            style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(Colors.pink[600])),
           )
         ],
       ),
